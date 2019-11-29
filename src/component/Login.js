@@ -4,6 +4,8 @@ import '../App.css';
 import '../css/lib/login.less';
 import zhanghu from '../images/zhanghu.png';
 import mima from '../images/mima.png';
+import shouji from '../images/shouji.png';
+import appCode from '../images/appCode.png';
 
 class PageC extends Component {
 	constructor(props) {
@@ -38,6 +40,15 @@ class PageC extends Component {
 							<input className='passward' value={this.passward} placeholder='密码' />
 						</div>
 						<div><button className='loginbtn'>登  录</button></div>
+					</div>
+					<div className='bottomcode'>
+						<div className='bottom-inner'>
+						    <img className='bottom-code' src={appCode}></img>
+							<div className='bottom-line'>
+							    <img className='bottom-shouji' src={shouji}></img>
+								<span>手机APP下载</span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>);
