@@ -67,8 +67,19 @@ html,body{
 	height: 100vh;
 	background-image: url('./images/bj.png');
 	background-size: cover;
+	overflow: hidden;
 }
 .login-title{
 	text-align: center;
 	color: #fff;
+	margin-top: 240px;
+}
+.login-title h3{
+	font-size: 40px;
+	font-weight: 200;
+}
+.login-title h4{
+	font-size: 34px;
+	margin-top: 30px;
+	font-weight: 200;
 }
