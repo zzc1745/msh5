@@ -30,8 +30,7 @@ class App extends Component {
 					<Route path='/' exact component={HomeComponent}></Route>
 					<Route path='/login' component={LoginComponent}></Route>
 					<Redirect to={{
-						pathname: '/',
-						search: '?utm=your+face'
+						pathname: '/login',
 					}} />
 				</Switch>
 
