@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import PageHeader from './lib/PageHeader';
 import '../App.css';
 import '../css/lib/login.less';
+import zhanghu from '../images/zhanghu.png';
+import mima from '../images/mima.png';
 
 class PageC extends Component {
 	constructor(props) {
 		super(props)
-		this.state={
-			account:'',
-			passward:''
+		this.state = {
+			account: '',
+			passward: ''
 		}
 	}
 
@@ -27,8 +29,15 @@ class PageC extends Component {
 						<h4>让品牌生意不再难</h4>
 					</div>
 					<div className='loginform'>
-						<div><input className='account' value={this.account} placeholder='手机号/用户名/邮箱'/></div>
-						<div><input className='passward' value={this.passward} placeholder='密码'/></div>
+						<div>
+							<img src={zhanghu}></img>
+							<input className='account' value={this.account} placeholder='手机号/用户名/邮箱' />
+						</div>
+						<div>
+						    <img src={mima}></img>
+							<input className='passward' value={this.passward} placeholder='密码' />
+						</div>
+						<div><button className='loginbtn'>登  录</button></div>
 					</div>
 				</div>
 			</div>);
