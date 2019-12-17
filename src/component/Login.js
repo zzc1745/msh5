@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import PageHeader from './lib/PageHeader';
+// import PageHeader from './lib/PageHeader';
 import '../App.css';
 import '../css/lib/login.less';
 import zhanghu from '../images/zhanghu.png';
 import mima from '../images/mima.png';
 import shouji from '../images/shouji.png';
-import appCode from '../images/appCode.png';
+// import appCode from '../images/appCode.png';
 
 class PageC extends Component {
 	constructor(props) {
@@ -20,7 +20,23 @@ class PageC extends Component {
 	componentDidMount() {
 
 	}
+	loginBtn=()=>{
+		console.log(this.state.account)
+		console.log(this.state.passward)
 
+	}
+	onChangeAccount=(e)=>{
+		const value = e.target.value;
+		this.setState({
+			account:value
+		})
+	}
+	onChangePass=(e)=>{
+		const value = e.target.value;
+		this.setState({
+			passward:value
+		})
+	}
 	//渲染
 	render() {
 		return (
@@ -32,20 +48,20 @@ class PageC extends Component {
 					</div>
 					<div className='loginform'>
 						<div>
-							<img src={zhanghu}></img>
-							<input className='account' value={this.account} placeholder='手机号/用户名/邮箱' />
+							<img src={zhanghu} alt=''></img>
+							<input className='account' value={this.account} onChange={this.onChangeAccount.bind(this)} placeholder='手机号/用户名/邮箱' />
 						</div>
 						<div>
-						    <img src={mima}></img>
-							<input className='passward' value={this.passward} placeholder='密码' />
+						    <img src={mima} alt=''></img>
+							<input className='passward' value={this.passward} onChange={this.onChangePass.bind(this)} placeholder='密码' />
 						</div>
-						<div><button className='loginbtn'>登  录</button></div>
+						<div><button className='loginbtn' onClick={this.loginBtn}>登  录</button></div>
 					</div>
 					<div className='bottomcode'>
 						<div className='bottom-inner'>
-						    <img className='bottom-code' src={appCode}></img>
+						    <img className='bottom-code' alt='' src='https://dev.icemdata.com/test/app.png'></img>
 							<div className='bottom-line'>
-							    <img className='bottom-shouji' src={shouji}></img>
+							    <img className='bottom-shouji' alt='' src={shouji}></img>
 								<span>手机APP下载</span>
 							</div>
 						</div>

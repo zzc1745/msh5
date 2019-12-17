@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, NavLink, Redirect, withRouter } from 'react-router-dom'
+import { Route, Switch, Redirect, withRouter } from 'react-router-dom'
 import Loadable from 'react-loadable';
 import Login from './component/Login';
 
@@ -28,9 +28,9 @@ class App extends Component {
 			<div>
 				<Switch>
 					<Route path='/' exact component={HomeComponent}></Route>
-					<Route path='/login' component={LoginComponent}></Route>
+					<Route path='/test/bbb/index.html' component={LoginComponent}></Route>
 					<Redirect to={{
-						pathname: '/login',
+						pathname: '/test/bbb/index.html',
 					}} />
 				</Switch>
 

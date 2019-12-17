@@ -251,7 +251,7 @@ img {
 /*伪元素1px*/
 
 .row-cell:before {
-	content: " ";
+	/* content: " ";  */
 	position: absolute;
 	left: 0;
 	top: 0;
